@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/galleryStyles.css">
+    <link rel="shortcut icon" href="media/favicon-32x32.png" type="image/x-icon">
+    <script src="js/galleryScript.js" defer></script>
+    <title>Flickr Gallery</title>
+</head>
+
+<body>
+    <div id="galleryWrapper">
+
+        <div id="galleryImgSearch">
+            <form>
+    
+                <input type="text" id="textInput" class="search-input" placeholder="Text search...">
+
+                <select id="amountInput" class="search-input">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+    
+                <select id="sizeInput" class="search-input">
+                    <option value="w">Small</option>
+                    <option value="z">Medium</option>
+                    <option value="b">Large</option>
+                </select>
+             
+                <select id="sortInput" class="search-input">
+                    <option value="relevance">Relevance</option>
+                    <option value="interestingness-desc">Interestingness</option>
+                    <option value="date-taken-desc">Date taken</option>
+                    <option value="date-posted-desc">Date posted</option>
+                </select>
+
+                <input type="submit" id="formButton" class="search-input" value="Search">
+            </form>
+        </div>
+        
+        <div id="errorDisplayDiv"></div>
+
+        <div id="galleryDisplayDiv">
+            <h2 class="heading-text">Gallery <span></span></h2>
+            <ul id="imageGallery"></ul>
+        </div>
+    </div>
+
+    <button onclick="backToTopFunc()" id="backToTop" title="Go to top">&#11121;</button> 
+ 
+</body>
+
+</html>
