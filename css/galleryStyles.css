@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* Gallery */
+#galleryWrapper{
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+
+/* Search bar */
+#galleryImgSearch{
+  background: #B4CEB3;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: end;
+}
+
+#formButton{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+#formButton:hover{
+  background-color: black;
+  color: #B4CEB3;
+}
+
+.search-input{
+  background-color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+
+/* Error display */
+#errorDisplayDiv{
+  height: 1.5rem;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+.heading-text {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.heading-text span {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+
+/* Gallery Image display 
+Disable all the imageGallery rules below, 4 in total to display images in their real size whitout clicking on them.
+*/
+#imageGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#imageGallery>li {
+  flex: 1 1 auto;
+  height: 300px;
+  cursor: pointer; 
+  position: relative;
+}
+
+#imageGallery::after {
+  content: "";
+  flex-grow: 999;
+}
+
+#imageGallery li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
+/* Back to top button*/
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid black;
+  background-color: #B4CEB3;
+  color: black;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+#backToTop:hover {
+  scale: 1.3;
+}
